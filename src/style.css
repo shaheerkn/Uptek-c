@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -11,9 +10,9 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  @apply font-medium text-[#646cff];
-}
-a:hover {
-  @apply text-[#535bf2];
+.hover\:shadow-primary:hover {
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-shadow: 4px 4px 0px #000;
+  --tw-ring-shadow: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
 }

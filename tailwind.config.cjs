@@ -5,17 +5,25 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ["Inter", "Avenir", "Helvetica", "Arial", "sans-serif"],
+        grotesk: ['Space Grotesk', "sans-serif"],
       },
-      dropShadow: {
-        logo: "0 0 2em #646cffaa",
-        "logo-tw": "0 0 2em #38bdf8aa",
-      },
-      height: {
-        18: "4.5rem",
+      fontSize: {
+        '5xl': ['3.052rem', '1'],
       },
       colors: {
-        "transparent-white": "rgba(255, 255, 255, 0.87)",
-      },
+        'indigo': {
+          '50': '#f3f3ff',
+          '100': '#e9e9fe',
+          '200': '#d6d7fe',
+          '300': '#b6b5fd',
+          '400': '#918bfa',
+          '500': '#5b47f5',
+          '600': '#5333ed',
+          '700': '#4a27da',
+          '800': '#3e21b6',
+          '900': '#341d95',
+        },
+      }
     },
   },
   plugins: [],
