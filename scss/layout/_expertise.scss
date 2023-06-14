@@ -1,0 +1,61 @@
+.expertise {
+  background-color: $color_dark;
+  color: $color_white;
+  padding-block: 175px;
+  counter-reset: expertise;
+
+  * {
+    color: inherit;
+  }
+
+
+  &__header {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 65px;
+  }
+
+  &__text-col {
+    max-width: 630px;
+
+    .tagline {
+      margin-bottom: 8px;
+    }
+
+    .h2 {
+      margin-bottom: 8px;
+    }
+
+    .p {
+      max-width: 535px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__card {
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 62px;
+    border-top: 1px solid $color_borders;
+
+    &:last-child {
+      border-bottom: 1px solid $color_borders;
+    }
+
+    h3 {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    &-no {
+      &::before {
+        counter-increment: expertise;
+        content: counter(expertise, decimal-leading-zero);
+      }
+    }
+  }
+}

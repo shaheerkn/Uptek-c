@@ -1,0 +1,60 @@
+.hero {
+  margin-block: 69px 100px;
+
+  .h1 {
+    margin-bottom: 48px;
+  }
+
+  &__description {
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    font-size: 0;
+    padding-bottom: 70px;
+    position: relative;
+
+    &-wrapper {
+      width: 100%;
+      overflow: hidden;
+      border-radius: $radius-card;
+  
+      @media (hover: hover) {
+        img {
+          transition: scale 0.3s linear;
+        }
+  
+        &:hover img {
+          scale: 1.1;
+        }
+      }
+    }
+  }
+
+  &__explore-more {
+    position: absolute;
+    bottom: 0;
+    right: 63px;
+
+    button {
+      height: 74px;
+      width: 74px;
+      background-color: $color_dark;
+      padding: 0;
+      outline: none;
+      border: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__contact-info {
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+  }
+}

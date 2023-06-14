@@ -1,0 +1,21 @@
+.partners {
+  background-color: $color_dark;
+  color: $color_white;
+  padding-block: 75px;
+
+  * {
+    color: inherit;
+  }
+
+  .tagline {
+    margin-bottom: 48px;
+  }
+
+  &__wrapper {
+    gap: 67px;
+  }
+
+  &__partner {
+    max-width: 170px;
+  }
+}

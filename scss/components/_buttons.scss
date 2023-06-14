@@ -1,0 +1,56 @@
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  padding: 12px 40px;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: $color_dark;
+  text-transform: capitalize;
+
+  &--primary {
+    background-color: $color_primary;
+    color: $color_dark;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  &--rounded {
+    border-radius: 100px;
+  }
+
+  &--full-rounded {
+    border-radius: 50%;
+  }
+
+  &--shadow {
+    box-shadow: $shadow_button;
+  }
+
+  &--open-preview {
+    width: 88px;
+    height: 88px;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+  }
+
+  &--small {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+  }
+
+  &--underline {
+    padding-inline: 0;
+    text-decoration: underline;
+  }
+}

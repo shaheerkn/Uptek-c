@@ -1,0 +1,9 @@
+.header {
+  margin-top: 40px;
+
+  .container {
+    justify-content: space-between;
+    padding: 24px 64px;
+    box-shadow: $shadow_primary;
+  }
+}
