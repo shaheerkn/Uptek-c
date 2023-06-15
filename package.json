@@ -3,8 +3,8 @@
     "node-sass": "^8.0.0"
   },
   "scripts": {
-    "compile:sass": "node-sass scss/style.scss assets/css/style.css --output-style compressed --watch --recursive"
-
+    "start": "npm run dev",
+    "dev": "node-sass scss/style.scss assets/css/style.css --output-style compressed --watch --recursive"
   },
   "devDependencies": {
     "concurrently": "^7.6.0"
