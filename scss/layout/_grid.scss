@@ -1,9 +1,9 @@
 
 .container {
   --container-paddings: 24px;
-
   width: 100%;
   max-width: calc(1090px + var(--container-paddings));
+  padding-inline: var(--container-paddings);
   margin-inline: auto;
 }
 
@@ -11,13 +11,25 @@
 .row {
   display: flex;
   justify-content: space-between;
-  gap: 44px;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  // gap: 44px;
 
-  .col-5 {
-    width: 46%;
+  // .col {
+  //   width: 100%;
+  // }
+
+  @media (min-width: 1024px) {
+    .col-md-5 {
+      width: 46%;
+    }
+
+    .col--md-6 {
+      width: 48%;
+    }
   }
 
-  .col-6 {
-    width: 48%;
-  }
+  // @media (max-width: 1024px) {
+  //   flex-direction: column;
+  // }
 }

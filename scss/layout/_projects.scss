@@ -2,6 +2,11 @@
   background-color: $color_offWhite;
   padding-block: 175px 120px;
 
+  @media (max-width: 768px) {
+    padding-block: 100px;
+  }
+
+
   &__header {
     align-items: center;
     justify-content: space-between;
@@ -28,6 +33,10 @@
     gap: 74px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 768px) {
+      gap: 48px;
+    }
   }
 
   &__project {
@@ -36,15 +45,37 @@
     max-width: 720px;
     position: relative;
 
+    @media (max-width: 768px) {
+      --img-height: 210px
+    }
+
     &-img {
       height: var(--img-height);
       border-radius: $radius-card;
       background-color: $color_placeholder;
+      overflow: hidden;
+
+      img {
+        transition: 0.3s;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        .btn--open-preview {
+          transform: rotate(45deg);
+        }
+      }
     }
 
     &-info {
       padding-inline: 40px;
       margin-top: -40px;
+
+      @media (max-width: 768px) {
+        margin-top: -20px;
+        padding-inline: 20px;
+      }
     }
 
     &-no {
@@ -52,6 +83,11 @@
       left: -70px;
       top: calc(var(--img-height) / 2);
       z-index: 22;
+
+      @media (max-width: 1250px) {
+        position: static;
+        margin-bottom: 16px;
+      }
     }
 
     &:nth-child(even) {

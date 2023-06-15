@@ -1,12 +1,28 @@
 .hero {
   margin-block: 69px 100px;
 
+  @media (max-width: 768px) {
+    margin-block-start: 80px;
+
+    // .btn-group {
+    //   flex-direction: column;
+    // }
+  }
+
   .h1 {
     margin-bottom: 48px;
+
+     @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__description {
     margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__img {
@@ -56,5 +72,9 @@
     top: 20px;
     writing-mode: tb-rl;
     transform: rotate(-180deg);
+
+    @media (max-width: 1250px) {
+      display: none;
+    }
   }
 }
