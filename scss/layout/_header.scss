@@ -1,3 +1,5 @@
+$breakpoint_for_mobile_nav: 1024px;
+
 .header {
   margin-top: 40px;
 
@@ -7,6 +9,7 @@
 
   .container {
     justify-content: space-between;
+    align-items: center;
     padding: 24px 64px;
     box-shadow: $shadow_primary;
     border-radius: $radius-card;
@@ -15,6 +18,52 @@
 
     @media (max-width: 1024px) {
       padding-inline: 24px;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    outline: none;
+    height: 11px;
+    width: 23px;
+    border: 0px;
+    padding: 0px;
+    background: transparent;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      background: $color_dark;
+      transition: all 250ms ease-out;
+      will-change: transform;
+      border-radius: 10px;
+    }
+
+    &::before {
+      transform: translateY(-0);
+    }
+
+    &::after {
+      transform: translateY(7px);
+    }
+
+    @media (max-width: $breakpoint_for_mobile_nav) {
+      display: flex;
+    }
+
+    &.active {
+      &:before {
+        transform: translateY(0) rotate(45deg);
+      }
+
+      &:after {
+        transform: translateY(0) rotate(-45deg);
+      }
     }
   }
 }

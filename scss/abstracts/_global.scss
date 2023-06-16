@@ -111,7 +111,7 @@ button, a {
     height: 8px;
     border-radius: 50%;
     background-color: $color_primary;
-    animation: blinker 1.7s cubic-bezier(.5, 0, 1, 1) infinite ;
+    animation: blinker 1.7s cubic-bezier(.5, 0, 1, 1) infinite;
   }
 
   @-webkit-keyframes blinker {

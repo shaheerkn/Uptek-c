@@ -1,6 +1,26 @@
 .main-navigation {
-  @media (max-width: 1024px) {
-    display: none; 
+  @media (max-width: $breakpoint_for_mobile_nav) {
+    --width: 250px;
+    position: fixed;
+    background-color: $color_white;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: var(--width);
+    height: 100%;
+    padding: 100px 20px;
+    box-shadow: $shadow_mobile_menu;
+    transform: translateX(-100%);
+    transition: transform 0.2s linear;
+
+    &.show-mobile-nav {
+     transform: translate(0);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   ul {

@@ -61,12 +61,29 @@
     flex-wrap: wrap;
     row-gap: 32px;
     border-radius: $radius-card;
+    position: relative;
 
-    &--active {
-      background-color: $color_light-green;
+    @media (min-width: 1024px) {
+      &--active {
+        background-color: $color_light-green;
+  
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -50px;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border-top: 53.5px solid transparent;
+          border-bottom: 53.5px solid transparent;
+          border-right: 107px solid $color_light-green;
+          border-radius: 8px 0 0 8px;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          z-index: -1;
+        }
+      }
     }
-
-
   }
 
   &__img-col {

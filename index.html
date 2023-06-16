@@ -26,6 +26,7 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
+        <button class="header__hamburger"></button>
       </div>
     </header>
 
@@ -48,7 +49,7 @@
               </div>
               <div class="hero__explore-more">
                 <img src="assets/images/text-circle.svg" alt="img" class="rotate-animtion">
-                <button type="button" class="btn btn--full-rounded">
+                <button type="button" class="btn btn--full-rounded hero__scrolldown">
                   <img src="assets/images/down-arrow.svg" alt="arrow" aria-hidden="true">
                 </button>
               </div>
@@ -62,7 +63,7 @@
         </div>
       </section>
 
-      <section class="partners">
+      <section class="partners first-section">
         <div class="container">
           <h5 class="tagline">brands we partner with</h5>
 
@@ -229,9 +230,10 @@
           <div class="reviews__text">
             <img src="assets/images/trustpilot.png" alt="" class="reviews__text-logo">
             <h2 class="h2 reviews__text-title">what our clients say about us?</h2>
-            <a href="#" class="btn btn--primary btn--rounded btn--top-right-arrow btn--mobile-full-width reviews__btn">all reviews <img src="assets/images/btn-arrow.svg" alt="arrow" aria-hidden="true"></a>
+            <a href="#" class="btn btn--primary btn--rounded btn--shadow btn--top-right-arrow btn--mobile-full-width reviews__btn">all reviews <img src="assets/images/btn-arrow.svg" alt="arrow" aria-hidden="true"></a>
           </div>
           <div class="reviews__wrapper">
+            <div class="overlay"></div>
             <div class="reviews__review reviews__review--active flex">
               <div class="reviews__img-col">
                 <img src="assets/images/client-1.png" alt="client-pic" class="img-fluid">
@@ -314,20 +316,24 @@
           <p>These are the pillars of our DNA. We work with digital agencies, providing the dev skills and resources</p>
 
           <div class="row flex-wrap">
-            <div class="latest-blogs__blog">
+            <article class="latest-blogs__blog">
               <div class="latest-blogs__img overflow-hidden">
-                <img src="assets/images/hero-img.jpeg" alt="blog-img" class="img-cover">
+                <a href="#">
+                  <img src="assets/images/hero-img.jpeg" alt="blog-img" class="img-cover">
+                </a>
               </div>
-              <h4 class="h4">Product Vision vs. Product Strategy: Why Do You Need Both?</h4>
+              <h4 class="h4"><a href="#">Product Vision vs. Product Strategy: Why Do You Need Both?</a></h4>
               <a href="#" class="btn btn--underline latest-blogs__read-btn">Read article</a>
-            </div>
-            <div class="latest-blogs__blog">
+            </article>
+            <article class="latest-blogs__blog">
               <div class="latest-blogs__img overflow-hidden">
-                <img src="assets/images/blog-2.webp" alt="blog-img" class="img-cover">
+                <a href="#">
+                  <img src="assets/images/blog-2.webp" alt="blog-img" class="img-cover">
+                </a>
               </div>
-              <h4 class="h4">Reasons Why New Products Fail and How To Avoid It?</h4>
+              <h4 class="h4"><a href="#">Reasons Why New Products Fail and How To Avoid It?</a></h4>
               <a href="#" class="btn btn--underline latest-blogs__read-btn">Read article</a>
-            </div>
+            </article>
           </div>
 
           <a href="#" class="btn btn--primary btn--rounded latest-blogs__all-posts-btn btn--mobile-full-width">all posts</a>
