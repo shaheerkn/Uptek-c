@@ -21,6 +21,20 @@ $breakpoint_for_mobile_nav: 1024px;
     }
   }
 
+  &--version-2 {
+    width: 100%;
+    background-color: $color_white;
+    margin-top: 0;
+    padding-inline: 0;
+      box-shadow: $shadow_primary;
+
+    .container {
+      padding-inline: 0;
+      box-shadow: none;
+    }
+  }
+
+
   &__hamburger {
     display: none;
     outline: none;

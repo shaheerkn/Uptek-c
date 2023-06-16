@@ -3,10 +3,14 @@
 
   @media (max-width: 768px) {
     margin-block-start: 80px;
+  }
 
-    // .btn-group {
-    //   flex-direction: column;
-    // }
+  &--version-2 {
+    margin-block: 150px 220px;
+
+    @media (max-width: 768px) {
+      margin-block: 80px;
+    }
   }
 
   .h1 {
