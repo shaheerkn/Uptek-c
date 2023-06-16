@@ -71,32 +71,33 @@ if (scrollMore) {
   })
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  const reviewCard = document.querySelectorAll('.reviews__review');
-  if (reviewCard && isDesktop) {
-    let activeCardIndex = 0;
+const reviewCard = document.querySelectorAll('.reviews__review');
+const threshold = 250;
 
-    function updateActiveCard() {
-      reviewCard.forEach((card, index) => {
-        if (index === activeCardIndex) {
-          card.classList.add('reviews__review--active');
-        } else {
-          card.classList.remove('reviews__review--active');
-        }
-      });
-    }
+if (reviewCard) {
+  function updateActiveCard() {
+    let activeCardIndex = 0;
   
-    function handleScroll() {
-      const firstCard = reviewCard[activeCardIndex];
-      const { top, bottom } = firstCard.getBoundingClientRect();
-      const threshold = firstCard.offsetHeight - 100;
+    for (let i = 0; i < reviewCard.length; i++) {
+      const card = reviewCard[i];
+      const rect = card.getBoundingClientRect();
   
-      if (top > window.innerHeight - threshold || bottom < threshold) {
-        activeCardIndex = (activeCardIndex + 1) % reviewCard.length;
-        updateActiveCard();
+      if (rect.top <= threshold) {
+        activeCardIndex = i;
+      } else {
+        break;
       }
     }
+  
+    reviewCard.forEach((card) => {
+      card.classList.remove('reviews__review--active');
+    });
+  
+    reviewCard[activeCardIndex].classList.add('reviews__review--active');
   }
+  
+  window.addEventListener('scroll', updateActiveCard);
+  
+  updateActiveCard();
+}
 
-  window.addEventListener('scroll', handleScroll);
-});
