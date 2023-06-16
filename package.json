@@ -5,7 +5,6 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "node-sass scss/style.scss assets/css/style.css --output-style compressed --watch --recursive"
-
   },
   "devDependencies": {
     "concurrently": "^7.6.0"

@@ -1,6 +1,11 @@
 .latest-blogs {
+  --gap: 30px;
   background-color: $color_offWhite;
   padding-block: 175px;
+
+  @media (max-width: 768px) {
+    padding-block: 100px;
+  }
 
   .tagline {
     margin-bottom: 16px;
@@ -12,11 +17,17 @@
 
   .row {
     margin-top: 50px;
+    gap: var(--gap);
     text-align: left;
   }
 
   &__blog {
-    width: 50%;
+    width: calc(50% - var(--gap) / 2);
+    position: relative;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &__img {
@@ -27,8 +38,16 @@
     margin-bottom: 24px;
   }
 
-  .btn {
+  &__read-btn {
     margin-top: 16px;
-    display: block;
+    display: inline-block;
+  }
+
+  &__all-posts-btn {
+    margin-top: 50px;
+  }
+
+  .img-cover {
+    transition: 0.3s;
   }
 }

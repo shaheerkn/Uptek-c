@@ -4,15 +4,19 @@
   padding-block: 175px;
   counter-reset: expertise;
 
+  @media (max-width: 768px) {
+    padding-block: 100px;
+  }
+
   * {
     color: inherit;
   }
-
 
   &__header {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 65px;
+    row-gap: 24px;
   }
 
   &__text-col {
@@ -55,6 +59,17 @@
       &::before {
         counter-increment: expertise;
         content: counter(expertise, decimal-leading-zero);
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding-block: 32px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      &-no {
+        order: -1;
       }
     }
   }
