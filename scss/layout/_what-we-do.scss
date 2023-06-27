@@ -1,0 +1,28 @@
+.what-we-do {
+  background-color: $color_offWhite;
+  padding-block: 175px;
+
+  @media (max-width: 768px) {
+    padding-block: 100px;
+  }
+
+  .container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__media-col {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 623px;
+
+    .row {
+      margin-top: 80px;
+    }
+  }
+}

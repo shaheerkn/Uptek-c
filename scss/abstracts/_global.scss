@@ -160,3 +160,17 @@ button, a {
     transition: none !important;
   }
 }
+
+.breadcrumbs {
+  @extend .h6;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+  margin-bottom: 16px;
+
+  a::after {
+    content: "/";
+    padding-left: 10px;
+  }
+}

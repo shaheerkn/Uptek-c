@@ -1,0 +1,53 @@
+.services {
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__wrapper {
+    gap: 30px;
+  }
+
+  &__card {
+    width: 33.3%;
+    height: 300px;
+    background-color: $color_serviceCards;
+    border-radius: $radius-card;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .h2 {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    max-width: 55px;
+  }
+
+  &__btn {
+    padding: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      img {
+        margin-left: 10px;
+        // transform: translateX(150px);
+      }
+    }
+  }
+
+  &:nth-child(1) {
+  }
+}

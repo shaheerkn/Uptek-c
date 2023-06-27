@@ -53,8 +53,10 @@
         transition: transform .3s ease-in-out;
       }
 
-      .active-link {
-        transform: scaleX(1);
+      &.active-link {
+        &::before {
+          transform: scaleX(1);
+        }
       }
 
       @media (hover: hover) {
