@@ -1,0 +1,17 @@
+.social-links {
+  @extend .no-list;
+  display: flex;
+  gap: 20px;
+
+  i {
+    @extend .h4;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color_primary;
+        scale: 1.1;
+      }
+    }
+  }
+
+}

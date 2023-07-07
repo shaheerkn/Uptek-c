@@ -94,5 +94,30 @@
     margin-block: 0;
     padding-block: 64px;
     text-align: center;
+    overflow: hidden;
+
+    &.has-margin-bottom {
+      margin-bottom: 175px;
+    }
+
+    .logo-icon-1, .logo-icon-2 {
+      display: none;
+    }
+
+    &.has-logo-icons {
+      .logo-icon-1 {
+        display: block;
+        position: absolute;
+        bottom: -72px;
+        left: 23px;
+      }
+
+      .logo-icon-2 {
+        display: block;
+        position: absolute;
+        top: 14px;
+        right: 110px;
+      }
+    }
   }
 }

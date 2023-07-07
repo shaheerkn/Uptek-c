@@ -7,4 +7,9 @@ $color_black:  #0000;
 $color_placeholder: #EBEBEB;
 $color_offWhite: #FAFAFA;
 $color_borders: #565656;
-$color_serviceCards: rgba(0, 236, 193, 0.08)
+$color_serviceCards: rgba(0, 236, 193, 0.08);
+
+
+.text-primary {
+  color: $color_primary;
+}

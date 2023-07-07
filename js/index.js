@@ -1,5 +1,5 @@
-let mediaSection = document.querySelectorAll('.has-parallax-scrolling .container');
 gsap.registerPlugin(ScrollTrigger);
+let mediaSection = document.querySelectorAll('.has-parallax-scrolling .container');
 
 let isReducedMotion = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 let isDesktop = window.matchMedia('(min-width: 1024px)').matches;
@@ -26,6 +26,30 @@ if (mediaSection && isReducedMotion && isDesktop) {
   })
 }
 
+// Secondary Hero Logo Icons animtions
+if (isReducedMotion && isDesktop) {
+  gsap.to('.logo-icon-1', {
+    scrollTrigger: {
+      trigger: '.hero--secondary',
+      start: "top",
+      end: "center top",
+      scrub: 1,
+    },
+    bottom: '50'
+  })
+  
+  gsap.to('.logo-icon-2', {
+    scrollTrigger: {
+      trigger: '.hero--secondary',
+      start: "top",
+      end: "center top",
+      scrub: 1,
+    },
+    top: '50'
+  })
+}
+
+// Mobile Navigation
 let mainNav = document.querySelector('.main-navigation');
 let headerHamburger = document.querySelector('.header__hamburger');
 let body = document.querySelector('body');
@@ -61,7 +85,7 @@ if (mainNav && headerHamburger) {
   });
 }
 
-
+//  Reviews Sections
 let scrollMore = document.querySelector('.hero__scrolldown');
 let firstSection = document.querySelector('.first-section')
 
@@ -74,7 +98,7 @@ if (scrollMore) {
 const reviewCard = document.querySelectorAll('.reviews__review');
 const threshold = 250;
 
-if (reviewCard) {
+if (reviewCard.length >= 1) {
   function updateActiveCard() {
     let activeCardIndex = 0;
   
@@ -101,3 +125,14 @@ if (reviewCard) {
   updateActiveCard();
 }
 
+let drawArrow = document.querySelector('.animated-arrow')
+
+gsap.to(drawArrow, {
+  scrollTrigger: {
+    trigger: 'footer .btn-group',
+    start: "top 85%",
+    onEnter: () => {
+    drawArrow.classList.add('animate');
+    },
+  }
+})

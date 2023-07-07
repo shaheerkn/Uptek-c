@@ -67,3 +67,19 @@
     }
   }
 }
+
+.footer-navigation {
+  @extend .main-navigation;
+  margin-top: 150px;
+
+  ul {
+    gap: 44px;
+
+    li {
+      a {
+        @extend .h3;
+      }
+    }
+  }
+
+}

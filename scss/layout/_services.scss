@@ -1,5 +1,5 @@
 .services {
-  margin-bottom: 100px;
+  margin-block: 100px;
 
   &__title {
     margin-bottom: 32px;
@@ -11,7 +11,6 @@
 
   &__card {
     width: 33.3%;
-    height: 300px;
     background-color: $color_serviceCards;
     border-radius: $radius-card;
     padding: 24px;
@@ -43,11 +42,7 @@
     &:hover {
       img {
         margin-left: 10px;
-        // transform: translateX(150px);
       }
     }
-  }
-
-  &:nth-child(1) {
   }
 }
