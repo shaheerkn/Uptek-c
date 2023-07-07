@@ -53,8 +53,10 @@
         transition: transform .3s ease-in-out;
       }
 
-      .active-link {
-        transform: scaleX(1);
+      &.active-link {
+        &::before {
+          transform: scaleX(1);
+        }
       }
 
       @media (hover: hover) {
@@ -64,4 +66,20 @@
       }
     }
   }
+}
+
+.footer-navigation {
+  @extend .main-navigation;
+  margin-top: 150px;
+
+  ul {
+    gap: 44px;
+
+    li {
+      a {
+        @extend .h3;
+      }
+    }
+  }
+
 }

@@ -1,5 +1,5 @@
 .hero {
-  margin-block: 69px 100px;
+  margin-block: 100px;
 
   @media (max-width: 768px) {
     margin-block-start: 80px;
@@ -35,19 +35,26 @@
     position: relative;
 
     &-wrapper {
+      height: 100%;
       width: 100%;
       overflow: hidden;
       border-radius: $radius-card;
-  
+
       @media (hover: hover) {
         img {
           transition: scale 0.3s linear;
         }
-  
+
         &:hover img {
           scale: 1.1;
         }
       }
+    }
+
+    &--secondary {
+      height: 500px;
+      padding-bottom: 0;
+      border-radius: $radius-card;
     }
   }
 
@@ -79,6 +86,43 @@
 
     @media (max-width: 1250px) {
       display: none;
+    }
+  }
+
+  &--secondary {
+    background-color: $color_primary;
+    margin-block: 0;
+    padding-block: 64px;
+    text-align: center;
+    overflow: hidden;
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    &.has-margin-bottom {
+      margin-bottom: 175px;
+    }
+
+    .logo-icon-1, .logo-icon-2 {
+      display: none;
+    }
+
+    &.has-logo-icons {
+      .logo-icon-1 {
+        display: block;
+        position: absolute;
+        bottom: -72px;
+        left: 23px;
+      }
+
+      .logo-icon-2 {
+        display: block;
+        position: absolute;
+        top: 14px;
+        right: 110px;
+      }
     }
   }
 }

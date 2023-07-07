@@ -2,6 +2,7 @@
 @import "abstracts/colors";
 @import "base/reset";
 @import "base/typography";
+@import "abstracts/margins";
 
 @import "abstracts/headings";
 @import "abstracts/shadows";
@@ -9,6 +10,7 @@
 @import "abstracts/global";
 
 @import "components/buttons";
+@import "components/social-links";
 
 @import "layout/grid";
 @import "layout/header";
@@ -20,3 +22,12 @@
 @import "layout/expertise";
 @import "layout/latest-blogs";
 @import "layout/reviews";
+@import "layout/footer";
+
+
+@import "layout/what-we-do";
+@import "layout/team";
+
+@import "layout/services";
+@import "layout/capabilities";
+@import "layout/our-works";

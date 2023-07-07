@@ -1,0 +1,28 @@
+.our-works {
+  @extend .section-paddings;
+
+  &__header {
+    max-width: 700px;
+    margin-inline: auto;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    .tagline {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__logos {
+    margin-top: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 48px;
+    justify-content: center;
+  }
+
+  &__preview {
+    margin-top: 65px;
+  }
+}

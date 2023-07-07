@@ -1,0 +1,77 @@
+.footer {
+  padding-block: 75px 80px;
+
+  &__heading {
+    @extend .h1;
+    border-left: 5px solid $color_primary;
+    padding-left: 50px;
+    margin-bottom: 50px;
+  }
+
+  .btn--primary {
+    color: $color_dark;
+  }
+
+  .btn-group {
+    display: inline-block;
+  }
+
+  .animated-arrow {
+    width: 70px;
+    height: 70px; 
+    margin: 0 auto;
+    transform: rotate(85deg) scaleX(-1);
+    position: absolute;
+    bottom: -40px;
+    right: -100px;
+  
+    .animated-arrow-part {  
+      stroke-width: 1;
+      stroke: $color_white; 
+      fill: none;
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400; 
+      animation-duration: 2.0s;
+      animation-fill-mode: forwards;
+
+      &.tail-1 {
+        animation-delay: .5s;
+      }
+  
+      &.tail-2 {
+        animation-delay: .7s;
+      }
+    }
+
+    &.animate .animated-arrow-part {
+      animation-name: draw;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
+  &__secondary-nav-wrapper {
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__secondary-nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    a {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      text-transform: capitalize;
+      text-decoration: none;
+    }
+  }
+}

@@ -2,7 +2,7 @@
 .container {
   --container-paddings: 24px;
   width: 100%;
-  max-width: calc(1090px + var(--container-paddings));
+  max-width: calc(1090px + calc(var(--container-paddings) * 2));
   padding-inline: var(--container-paddings);
   margin-inline: auto;
 }
@@ -13,6 +13,15 @@
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 48px;
+
+  &--col {
+    flex-direction: column;
+  }
+
+  .col-6 {
+    width: calc(50% - 27px);
+  }
+
   // gap: 44px;
 
   // .col {
@@ -20,12 +29,16 @@
   // }
 
   @media (min-width: 1024px) {
-    .col-md-5 {
+    .col--md-5 {
       width: 46%;
     }
 
     .col--md-6 {
       width: 48%;
+    }
+
+    .col--md-7 {
+      width: 60%;
     }
   }
 
