@@ -136,3 +136,40 @@ gsap.to(drawArrow, {
     },
   }
 })
+
+const container = document.querySelectorAll('.container')[0];
+const leftAlignWithContainer = document.querySelectorAll('.left-align-with-container');
+
+console.log(leftAlignWithContainer.length)
+
+if (container && leftAlignWithContainer.length >= 1) {
+  function setMarginLeft () {
+    let containerLeftMargin= container.offsetLeft
+    leftAlignWithContainer.forEach(OnlyLeftAligncontainer => {
+      console.log(OnlyLeftAligncontainer)
+      OnlyLeftAligncontainer.style.cssText = `margin-left: ${containerLeftMargin}px`
+    })
+  }
+
+  setMarginLeft()
+
+  window.addEventListener('resize', ()=> {
+    setMarginLeft()
+  })
+}
+
+// Get all tab elements
+const serviceTabs = document.querySelectorAll('.service-process__tab');
+
+if (serviceTabs.length >= 1) {
+  // Attach click event listeners to each tab
+  serviceTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      serviceTabs.forEach(tab => {
+        tab.classList.remove('active');
+      });
+      tab.classList.add('active');
+    });
+  });
+}
+

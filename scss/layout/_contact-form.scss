@@ -1,0 +1,50 @@
+.contact-form {
+  .container {
+    border-radius: $radius-card;
+    background: $color_light-green;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text-col {
+    width: 335px;
+
+    .h2 {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 650px;
+    border-radius: $radius-card;
+    background: $color_white;
+    box-shadow: 0px 24px 48px 0px rgba(0, 0, 0, 0.03);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &.pull-up-form .contact-form__form {
+    margin-top: -100px;
+  }
+
+  .input-row {
+    gap: 24px;
+  }
+
+  .input-field {
+    @extend .h4;
+    width: 100%;
+    padding: 20px;
+    border-radius: $radius-16;
+    background: $color_offWhite;
+    border: none;
+  }
+
+  textarea.input-field {
+    height: 280px;
+  }
+}

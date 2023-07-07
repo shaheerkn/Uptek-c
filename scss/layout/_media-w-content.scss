@@ -1,11 +1,6 @@
 .media-w-content {
   width: 100%;
-  padding-block: 175px;
   background-color: $color_white;
-
-  @media (max-width: 768px) {
-    padding-block: 100px;
-  }
 
   .container {
     row-gap: 48px;
@@ -19,22 +14,30 @@
   &__media-col {
     width: 100%;
     max-width: 450px;
-    padding-bottom: 126px;
+  }
+
+  &.has-parallax-scrolling {
+    .media-w-content__media-col {
+      padding-bottom: 126px;
+    }
   }
 
   &__media {
     border-radius: $radius-card;
-    background-color: $color_placeholder;
-    width: 300px;
-    height: 313px;
     overflow: hidden;
 
     &--1 {
-      margin-left: auto;
+      background-color: $color_placeholder;
+      width: 300px;
+      height: 313px;
       max-width: 260px;
+      margin-left: auto;
     }
 
     &--2 {
+      background-color: $color_placeholder;
+      width: 300px;
+      height: 313px;
       max-width: 370px;
       position: absolute;
       bottom: 0;

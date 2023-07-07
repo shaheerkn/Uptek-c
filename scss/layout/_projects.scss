@@ -69,12 +69,17 @@
     }
 
     &-info {
-      padding-inline: 40px;
-      margin-top: -40px;
+      margin-top: 32px;
 
-      @media (max-width: 768px) {
-        margin-top: -20px;
-        padding-inline: 20px;
+      &.pull-up {
+        padding-inline: 40px;
+        margin-top: -40px;
+  
+        @media (max-width: 768px) {
+          margin-top: -20px;
+          padding-inline: 20px;
+        }
+
       }
     }
 

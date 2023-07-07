@@ -1,0 +1,30 @@
+.info-cards {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    display: flex;
+    width: 100%;
+    max-width: 345px;
+    padding: 55px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_serviceCards;
+    border-radius: $radius-card;
+  }
+
+  &__icon {
+    background-color: $color_white;
+    padding: 16px;
+    color: $color_primary;
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+
+  .p {
+    margin-bottom: 8px;
+  }
+}
