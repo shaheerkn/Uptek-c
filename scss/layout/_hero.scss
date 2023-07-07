@@ -96,6 +96,11 @@
     text-align: center;
     overflow: hidden;
 
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
     &.has-margin-bottom {
       margin-bottom: 175px;
     }

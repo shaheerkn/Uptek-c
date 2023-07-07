@@ -1,6 +1,6 @@
 .team {
+  @extend .section-paddings;
   background-color: $color_offWhite;
-  padding-block: 175px;
 
   &__members {
     flex-wrap: wrap;
