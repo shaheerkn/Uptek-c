@@ -24,5 +24,9 @@
 
   &__preview {
     margin-top: 65px;
+
+    img {
+      max-width: 100%;
+    }
   }
 }

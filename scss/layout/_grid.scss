@@ -46,3 +46,24 @@
   //   flex-direction: column;
   // }
 }
+
+
+// Grid for 3 cards per row on Desktop, 2 on tablet, 1 on mobile
+.grid {
+  --card-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--card-gap);
+
+  &__item {
+    width: calc(33.3% - var(--card-gap) + (var(--card-gap) / 3));
+
+    @media (max-width: 1024px) {
+      width: calc(50% - var(--card-gap) + (var(--card-gap) / 2));
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

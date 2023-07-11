@@ -209,9 +209,25 @@ button, a {
 
 .section-paddings {
   padding-block: 175px;
+
+  @media (max-width: 1025px) {
+    padding-block: 134px;
+  }
+
+  @media (max-width: 768px) {
+    padding-block: 100px;
+  }
 }
 
 .section-margins {
   margin-block: 175px;
   padding-block: 0;
+
+  @media (max-width: 1025px) {
+    margin-block: 134px;
+  }
+
+  @media (max-width: 768px) {
+    margin-block: 100px;
+  }
 }

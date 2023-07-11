@@ -1,11 +1,5 @@
 .projects {
   background-color: $color_offWhite;
-  padding-block: 175px 120px;
-
-  @media (max-width: 768px) {
-    padding-block: 100px;
-  }
-
 
   &__header {
     align-items: center;

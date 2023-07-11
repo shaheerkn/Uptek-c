@@ -1,12 +1,7 @@
 .expertise {
   background-color: $color_dark;
   color: $color_white;
-  padding-block: 175px;
   counter-reset: expertise;
-
-  @media (max-width: 768px) {
-    padding-block: 100px;
-  }
 
   * {
     color: inherit;

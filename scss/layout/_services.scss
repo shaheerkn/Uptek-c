@@ -1,16 +1,9 @@
 .services {
-  margin-block: 100px;
-
   &__title {
     margin-bottom: 32px;
   }
 
-  &__wrapper {
-    gap: 30px;
-  }
-
   &__card {
-    width: 33.3%;
     background-color: $color_serviceCards;
     border-radius: $radius-card;
     padding: 24px;
