@@ -2,23 +2,13 @@
   background-color: $color_dark;
   padding-block: 175px;
 
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 50px;
-  }
-
-  &__media {
-    width: 40%;
-  }
-
   &__wrapper {
-    width: 566px;
+    // width: 590px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 64px;
+    margin-top: 100px;
   }
 
   &__header {

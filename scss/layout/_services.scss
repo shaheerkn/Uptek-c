@@ -3,13 +3,17 @@
     margin-bottom: 32px;
   }
 
+  &__wrapper {
+    gap: 24px;
+  }
+
   &__card {
     background-color: $color_serviceCards;
     border-radius: $radius-card;
-    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    flex: 1 0 230px;
 
     .h2 {
       color: inherit;
