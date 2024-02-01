@@ -14,10 +14,14 @@
     flex-direction: column;
     gap: 16px;
     flex: 1 0 230px;
-
+  
     .h2 {
       color: inherit;
       text-decoration: none;
+    }
+
+    &.grid__item {
+       padding: 24px;
     }
   }
 
