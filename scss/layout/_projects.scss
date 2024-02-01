@@ -56,8 +56,8 @@
 
     @media (hover: hover) {
       &:hover {
-        .btn--open-preview {
-          transform: rotate(45deg);
+        .btn--open-preview img {
+          transform: translate(3px, -3px);
         }
       }
     }

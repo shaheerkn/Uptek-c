@@ -46,7 +46,7 @@
     @media (hover: hover) {
       &:hover {
         img {
-          transform: rotate(45deg) translateX(10px);
+          transform: translateX(3px) translateY(-3px);
         }
       }
     }
@@ -129,10 +129,13 @@
 
   &--arrow-to-right {
     rotate: -90deg;
-    transition: 0.3s;
+    
+    img {
+      transition: 0.3s;
+    }
 
-    &:hover {
-      rotate: -140deg;
+    &:hover img {
+      translate: 0 5px;
     }
   }
 
