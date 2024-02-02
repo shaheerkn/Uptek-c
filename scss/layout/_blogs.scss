@@ -1,5 +1,6 @@
 .blogs {
   $border_radius: 12px;
+  $desktop-blogs-per-row: 2;
 
   .container {
     gap: 140px;
@@ -17,7 +18,7 @@
     flex: 1 0 695px;
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat($desktop-blogs-per-row, 1fr);
     gap: 50px;
   }
 
@@ -75,10 +76,6 @@
       top: 50px;
     }
 
-    form {
-      width: 100%;
-    }
-
     input {
       background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.53 20.47L17.689 16.629C18.973 15.106 19.75 13.143 19.75 11C19.75 6.175 15.825 2.25 11 2.25C6.175 2.25 2.25 6.175 2.25 11C2.25 15.825 6.175 19.75 11 19.75C13.143 19.75 15.106 18.973 16.629 17.689L20.47 21.53C20.616 21.676 20.808 21.75 21 21.75C21.192 21.75 21.384 21.677 21.53 21.53C21.823 21.238 21.823 20.763 21.53 20.47ZM3.75 11C3.75 7.002 7.002 3.75 11 3.75C14.998 3.75 18.25 7.002 18.25 11C18.25 14.998 14.998 18.25 11 18.25C7.002 18.25 3.75 14.998 3.75 11Z' fill='%23141414'/%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
@@ -87,6 +84,7 @@
       border-radius: 100px;
       padding: 14px 14px 14px 55px;
       font-size: 18px;
+      width: 100%;
     }
 
     &-recent-post {
